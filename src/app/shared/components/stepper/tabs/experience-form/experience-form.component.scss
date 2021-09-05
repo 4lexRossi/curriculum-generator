@@ -1,0 +1,14 @@
+.experience-tab {
+    .experience-form {
+      background-color: rgb(255, 255, 255);
+      color: rgb(26, 26, 26);
+      .tab-title {
+        display: flex;
+        justify-content: space-between;
+        .experience-title {
+          display: flex;
+          align-items: center;
+            }
+        }
+    }
+}

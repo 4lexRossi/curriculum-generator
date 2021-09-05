@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PersonalFormComponent } from './stepper/tabs/personal-form/personal-form.component';
+import { ExperienceFormComponent } from './stepper/tabs/experience-form/experience-form.component';
 
 
 
@@ -14,7 +15,8 @@ import { PersonalFormComponent } from './stepper/tabs/personal-form/personal-for
     HeaderComponent,
     FooterComponent,
     StepperComponent,
-    PersonalFormComponent
+    PersonalFormComponent,
+    ExperienceFormComponent
   ],
   imports: [
     CommonModule,
