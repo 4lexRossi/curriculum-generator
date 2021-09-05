@@ -1,6 +1,9 @@
 .stepper {
-    width: 600px;
+    width: 800px;
     .mat-stepper-horizontal {
         background-color: transparent;
+    }
+    .mat-stepper-label-position-bottom .mat-horizontal-stepper-header {
+        border: 0;
     }
 }

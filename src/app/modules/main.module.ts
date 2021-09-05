@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 import { ComponentsModule } from '../shared/components/components.module';
 
 
-
 @NgModule({
   imports: [
     CommonModule,
