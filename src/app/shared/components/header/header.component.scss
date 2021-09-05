@@ -5,6 +5,12 @@ header {
         font-size: 20px;
         font-weight: 700;
         color: rgb(199, 199, 199);
-        padding: 30px 0 0 150px;
+        padding: 30px 0 0 100px;
+    }
+    .progress-bar {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
