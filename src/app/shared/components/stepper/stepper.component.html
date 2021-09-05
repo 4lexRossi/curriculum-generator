@@ -7,6 +7,8 @@
         </mat-step>
         <mat-step [stepControl]="secondFormGroup">
             <ng-template matStepLabel>Experiências</ng-template>
+            <div class="separator"></div>
+            <app-experience-form></app-experience-form>
         </mat-step>
         <mat-step [stepControl]="reviewFormGroup">
             <ng-template matStepLabel>Revisão</ng-template>
