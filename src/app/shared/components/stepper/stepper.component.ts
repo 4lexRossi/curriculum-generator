@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class StepperComponent implements OnInit {
   firstFormGroup!: FormGroup;
   secondFormGroup!: FormGroup;
+  reviewFormGroup!: FormGroup;
 
   constructor(private _formBuilder: FormBuilder) { }
 

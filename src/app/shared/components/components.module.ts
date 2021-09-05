@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PersonalFormComponent } from './stepper/tabs/personal-form/personal-form.component';
 
 
 
@@ -12,7 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    StepperComponent
+    StepperComponent,
+    PersonalFormComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   exports: [
     HeaderComponent,
     FooterComponent,
-    StepperComponent
+    StepperComponent,
+    PersonalFormComponent
   ]
 })
 export class ComponentsModule { }
