@@ -1,17 +1,19 @@
 <div class="stepper">
     <mat-stepper labelPosition="bottom" #stepper>
         <mat-step class="personal-form" [stepControl]="firstFormGroup">
-            <ng-template matStepLabel>Pessoal</ng-template>
+            <ng-template matStepLabel>Personal</ng-template>
             <div class="separator"></div>
             <app-personal-form></app-personal-form>
+            <button mat-button matStepperNext>Next</button>
         </mat-step>
         <mat-step [stepControl]="secondFormGroup">
-            <ng-template matStepLabel>Experiências</ng-template>
+            <ng-template matStepLabel>Experiences</ng-template>
             <div class="separator"></div>
             <app-experience-form></app-experience-form>
+            <button mat-button matStepperNext>Next</button>
         </mat-step>
         <mat-step [stepControl]="reviewFormGroup">
-            <ng-template matStepLabel>Revisão</ng-template>
+            <ng-template matStepLabel>Review</ng-template>
             <!-- <p>You are now done.</p> -->
             <div>
                 <button mat-button matStepperPrevious>Back</button>
