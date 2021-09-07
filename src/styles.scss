@@ -16,7 +16,10 @@ $default-theme: mat-dark-theme(
 
 @include angular-material-theme($default-theme);
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 footer {
   background-color: mat-color($default-theme-primary);
 }
