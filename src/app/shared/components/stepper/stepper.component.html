@@ -4,20 +4,26 @@
             <ng-template matStepLabel>Personal</ng-template>
             <div class="separator"></div>
             <app-personal-form></app-personal-form>
-            <button mat-button matStepperNext>Next</button>
+            <div class="form-action">
+                <button mat-flat-button (click)="stepper.reset()">Reset</button>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
         </mat-step>
         <mat-step [stepControl]="secondFormGroup">
             <ng-template matStepLabel>Experiences</ng-template>
             <div class="separator"></div>
             <app-experience-form></app-experience-form>
-            <button mat-button matStepperNext>Next</button>
+            <div class="form-action">
+                <button mat-flat-button matStepperPrevious>Back</button>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
         </mat-step>
         <mat-step [stepControl]="reviewFormGroup">
             <ng-template matStepLabel>Review</ng-template>
             <!-- <p>You are now done.</p> -->
-            <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button (click)="stepper.reset()">Reset</button>
+            <div class="form-action">
+                <button mat-flat-button matStepperPrevious>Back</button>
+                <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
             </div>
         </mat-step>
     </mat-stepper>
