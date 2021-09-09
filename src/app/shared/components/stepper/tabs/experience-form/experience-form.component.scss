@@ -2,13 +2,35 @@
     .experience-form {
       background-color: rgb(255, 255, 255);
       color: rgb(26, 26, 26);
+      margin-bottom: 10px;
       .tab-title {
         display: flex;
         justify-content: space-between;
         .experience-title {
           display: flex;
           align-items: center;
-            }
         }
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        .row-about-me {
+          height: 200px;
+        }
+        button {
+          margin: 0 8px;
+        }
+      }
+
+      ::ng-deep .mat-form-field {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
     }
+
+
 }

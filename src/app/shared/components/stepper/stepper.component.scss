@@ -3,11 +3,20 @@
     .mat-stepper-horizontal {
         background-color: transparent;
     }
+
     .mat-stepper-label-position-bottom .mat-horizontal-stepper-header {
         border: 0;
     }
+
     .form-action {
+
         display: flex;
         justify-content: space-between;
+
+        button:not(:last-of-type) {
+            // background-color: aliceblue;
+            border: 1px solid black;
+            color: black
+        }
     }
 }
