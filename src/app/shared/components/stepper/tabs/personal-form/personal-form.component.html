@@ -9,7 +9,6 @@
             <mat-icon>expand_more</mat-icon>
             <mat-menu appendTo="body" class="language-menu-content" #menu="matMenu">
               <a mat-list-item *ngFor="let option of languages">
-              <!-- <a mat-list-item (click)="onSelectLanguage(lang)" *ngFor="let lang of listOfLanguages"> -->
                 <button class="language-menu-item" mat-menu-item>
                   <span>{{option.viewValue}}</span>
                 </button></a>
