@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Languages } from 'src/app/models/languages';
 import { PersonalData } from 'src/app/models/personalData';
+
 
 @Component({
   selector: 'app-personal-form',
@@ -18,7 +19,7 @@ export class PersonalFormComponent {
   days = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 
   selectedLanguage = this.languages[1].value;
-  constructor(private readonly formBuilder: FormBuilder,) { }
+  constructor(private readonly formBuilder: FormBuilder) { }
 
   personalData: PersonalData = {
     firstName: '',
