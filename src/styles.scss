@@ -16,6 +16,26 @@ $default-theme: mat-dark-theme(
 
 @include angular-material-theme($default-theme);
 
+:root {
+	--main-text-color: rgb(199, 199, 199);
+
+	.mat-form-field-underline {
+		display: none;
+	}
+
+	.mat-form-field .mat-form-field-flex {
+		border: 1px solid var(--main-text-color);
+		border-radius: 8px !important;
+		box-shadow: 0px 1px 1px rgba(33, 37, 41, 0.2), 0px 2px 2px rgba(33, 37, 41, 0.14), 0px 1px 5px rgba(33, 37, 41, 0.12) !important;
+		padding-bottom: 10px;
+	}
+
+	.mat-select-arrow {
+		color: #000;
+		margin-top: 14px;
+	}
+}
+
 body {
 	font-family: Roboto, "Helvetica Neue", sans-serif;
 }
@@ -64,20 +84,3 @@ q:before, q:after {
 a, ins, a:link {
 	text-decoration: none !important;
 }
-
-:root .mat-form-field-underline {
-	display: none;
-}
-
-:root .mat-form-field .mat-form-field-flex {
-	border: 1px solid rgb(199, 199, 199);
-	border-radius: 8px !important;
-	box-shadow: 0px 1px 1px rgba(33, 37, 41, 0.2), 0px 2px 2px rgba(33, 37, 41, 0.14), 0px 1px 5px rgba(33, 37, 41, 0.12);
-	padding-bottom: 10px;
-}
-
-:root .mat-select-arrow {
-	color: #000;
-	margin-top: 14px;
-}
-

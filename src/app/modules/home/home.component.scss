@@ -1,4 +1,16 @@
 .content-body {
+  z-index: 5;
   min-height: calc(100vh);
-  margin-bottom: 40px;
+  margin: -220px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  .body-stepper {
+    .progress-title {
+      display: flex;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: 700;
+      color: var(--main-text-color);
+    }
+  }
 }
