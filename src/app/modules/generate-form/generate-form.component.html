@@ -5,8 +5,13 @@
             <div class="separator"></div>
             <app-personal-form></app-personal-form>
             <div class="form-action">
-                <button mat-button (click)="stepper.reset()">Reset</button>
-                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                <button mat-button (click)="stepper.reset()">Reset <span class="material-icons">
+                    restart_alt
+                    </span>
+                    </button>
+                <button mat-raised-button color="primary" matStepperNext>Next <span class="material-icons">
+                    chevron_right
+                    </span></button>
             </div>
         </mat-step>
         <mat-step [stepControl]="secondFormGroup">
@@ -14,16 +19,25 @@
             <div class="separator"></div>
             <app-experience-form></app-experience-form>
             <div class="form-action">
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-raised-button color="primary" matStepperNext>Next</button>
+                <button mat-button matStepperPrevious><span class="material-icons">
+                    chevron_left
+                    </span> Back</button>
+                <button mat-raised-button color="primary" matStepperNext>Next <span class="material-icons">
+                    chevron_right
+                    </span></button>
             </div>
         </mat-step>
         <mat-step [stepControl]="reviewFormGroup">
             <ng-template matStepLabel>Review</ng-template>
             <!-- <p>You are now done.</p> -->
             <div class="form-action">
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
+                <button mat-button matStepperPrevious><span class="material-icons">
+                    chevron_left
+                    </span> Back</button>
+                <button mat-raised-button color="primary" (click)="stepper.reset()">Reset <span class="material-icons">
+                    restart_alt
+                    </span>
+                    </button>
             </div>
         </mat-step>
     </mat-stepper>

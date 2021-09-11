@@ -28,16 +28,59 @@
         <form [formGroup]="experienceDataForm">
           <div class="row">
             <mat-accordion>
-              <mat-expansion-panel class="experience-card">
+              <mat-expansion-panel
+                class="experience-card"
+                (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title class="experience-card-title">
-                    Self aware panel
+                    <div *ngIf="!panelOpenState; else openCard">
+                      Open experience panel <span class="material-icons">
+                        expand_more
+                        </span>
+                    </div>
+                    <ng-template #openCard>
+                      Close experience panel <span class="material-icons">
+                        expand_less
+                        </span>
+                    </ng-template>
                   </mat-panel-title>
-                  <mat-panel-description>
-                  </mat-panel-description>
                 </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
+                  <mat-panel-description class="experience-card-content">
+                    <div class="row-double">
+                      <div class="double-item">
+                      <mat-label>Job Title:</mat-label>
+                      <mat-form-field appearance="fill">
+                        <input matInput formControlName="jobTitle" id="jobTitle" class="form-control">
+                        <mat-error *ngIf="experienceFields.jobTitle.invalid">{{getErrorMessage("jobTitle", experienceFields.jobTitle)}}</mat-error>
+                      </mat-form-field>
+                      </div>
+                      <span class="separator"></span>
+                      <div class="double-item">
+                        <mat-label>City/Remote:</mat-label>
+                        <mat-form-field appearance="fill">
+                          <input matInput formControlName="city" id="city" class="form-control">
+                          <mat-error *ngIf="experienceFields.city.invalid">{{getErrorMessage("city", experienceFields.city)}}</mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                    <div class="row-single">
+                      <mat-label>Company name:</mat-label>
+                      <mat-form-field appearance="fill">
+                        <input matInput formControlName="company" id="company" class="form-control">
+                        <mat-error *ngIf="experienceFields.company.invalid">{{getErrorMessage("company", experienceFields.company)}}</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </mat-panel-description>
               </mat-expansion-panel>
+              <div class="action-experience">
+                <button mat-raised-button color="primary">
+                  <span class="material-icons">
+                    add_circle_outline
+                  </span>
+                  Add Experience
+                </button>
+              </div>
             </mat-accordion>
           </div>
         </form>
