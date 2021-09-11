@@ -2,8 +2,8 @@
   margin-bottom: 20px;
   .personal-form {
     box-shadow: 0px 9px 11px rgba(33, 37, 41, 0.2);
-    background-color: rgb(255, 255, 255);
-    color: rgb(26, 26, 26);
+    background-color: var(--card-background-color);
+    color: var(--card-text-color);
     .tab-title {
       display: flex;
       justify-content: space-between;
@@ -12,7 +12,7 @@
         align-items: center;
       }
       .select-language {
-        color: rgb(26, 26, 26);
+        color: var(--card-text-color);
         display: flex;
         align-items: center;
         .language-label {
