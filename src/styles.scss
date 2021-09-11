@@ -18,6 +18,8 @@ $default-theme: mat-dark-theme(
 
 :root {
 	--main-text-color: rgb(199, 199, 199);
+	--card-text-color: rgb(26, 26, 26);
+	--card-background-color: rgb(255, 255, 255);
 
 	.mat-form-field-underline {
 		display: none;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AboutMeData } from 'src/app/models/aboutMeData';
 import { ExperienceData } from 'src/app/models/experienceData';
 
 @Component({
@@ -13,29 +14,59 @@ export class ExperienceFormComponent implements OnInit {
 
   constructor(private readonly formBuilder: FormBuilder) { }
 
-  experienceData: ExperienceData = {
+  aboutMeData: AboutMeData = {
     aboutMe: ''
+  }
+
+  experienceData: ExperienceData = {
+    jobTitle: '',
+    city: '',
+    company: '',
+    beginData: '',
+    endData: '',
+    description: ''
   }
 
   ngOnInit(): void {
   }
 
-  fields = {
-    aboutMe : new FormControl(this.experienceData.aboutMe, Validators.pattern(this.descriptionPattern)),
+  aboutFields = {
+    aboutMe : new FormControl(this.aboutMeData.aboutMe, Validators.pattern(this.descriptionPattern)),
   }
 
+  experienceFields = {
+    jobTitle : new FormControl(this.experienceData.jobTitle, Validators.pattern(this.descriptionPattern)),
+    city : new FormControl(this.experienceData.city, Validators.maxLength(30,)),
+    company : new FormControl(this.experienceData.company, Validators.maxLength(30,)),
+    beginData : new FormControl(this.experienceData.beginData, Validators.maxLength(30,)),
+    endData : new FormControl(this.experienceData.endData, Validators.maxLength(30,)),
+    description : new FormControl(this.experienceData.description, Validators.pattern(this.descriptionPattern)),
+  }
+
+  aboutMeDataForm = this.formBuilder.group({
+    aboutMe: this.aboutFields.aboutMe,
+  });
+
   experienceDataForm = this.formBuilder.group({
-    aboutMe: this.fields.aboutMe,
+    jobTitle: this.experienceFields.jobTitle,
+    city: this.experienceFields.city,
+    company: this.experienceFields.company,
+    beginData: this.experienceFields.beginData,
+    endData: this.experienceFields.endData,
+    description: this.experienceFields.description,
   });
 
   onSubmit = () => {
-    if (this.experienceDataForm.valid) {
+    if (this.aboutMeDataForm.valid) {
       // this.submitEvent(this.personalDataForm);
-      this.experienceDataForm;
+      this.aboutMeDataForm;
     // } else {
     //   this.fields.customer.setErrors({invalidCustomer: true});
     //   this.validateAllFormFields(this.formGroupReference);
     //   this.toastComponent.error(this.translate.instant('ERROR'), this.translate.instant('VALIDATION_ERRORS'));
+    }
+    if (this.experienceDataForm.valid) {
+      this.experienceDataForm;
     }
   }
 

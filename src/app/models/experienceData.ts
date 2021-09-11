@@ -1,3 +1,8 @@
 export interface ExperienceData {
-    aboutMe: string;
+    jobTitle: string;
+    city: string;
+    company: string;
+    beginData: string;
+    endData?: string;
+    description: string;
 }

@@ -1,16 +1,16 @@
-<div class="experience-tab">
-    <mat-card class="experience-form">
+<mat-card class="experience-tab">
+    <mat-card class="about-me-form">
       <div class="tab-title">
         <div class="experience-title">Profile</div>
       </div>
       <hr>
       <mat-card-content>
-        <form [formGroup]="experienceDataForm">
+        <form [formGroup]="aboutMeDataForm">
           <div class="row">
             <mat-label>About me:</mat-label>
             <mat-form-field appearance="fill">
               <textarea  matInput formControlName="aboutMe" id="aboutMe" class="row-about-me"></textarea>
-              <mat-error *ngIf="fields.aboutMe.invalid">{{getErrorMessage("aboutMe", fields.aboutMe)}}</mat-error>
+              <mat-error *ngIf="aboutFields.aboutMe.invalid">{{getErrorMessage("aboutMe", aboutFields.aboutMe)}}</mat-error>
             </mat-form-field>
             <div class="action-about-me">
               <button mat-raised-button color="primary">Save</button>
@@ -19,4 +19,28 @@
         </form>
       </mat-card-content>
     </mat-card>
-  </div>
+    <mat-card class="jobs-form">
+      <div class="tab-title">
+        <div class="jobs-title">Professional Experience</div>
+      </div>
+      <hr>
+      <mat-card-content>
+        <form [formGroup]="experienceDataForm">
+          <div class="row">
+            <mat-accordion>
+              <mat-expansion-panel class="experience-card">
+                <mat-expansion-panel-header>
+                  <mat-panel-title class="experience-card-title">
+                    Self aware panel
+                  </mat-panel-title>
+                  <mat-panel-description>
+                  </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+</mat-card>
