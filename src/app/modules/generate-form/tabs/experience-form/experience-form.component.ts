@@ -11,6 +11,7 @@ import { ExperienceData } from 'src/app/models/experienceData';
 export class ExperienceFormComponent implements OnInit {
 
   descriptionPattern = '^[A-Za-z0-9-_ ]+$';
+  panelOpenState = false;
 
   constructor(private readonly formBuilder: FormBuilder) { }
 
