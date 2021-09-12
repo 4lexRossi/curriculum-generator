@@ -1,7 +1,7 @@
 <div class="experience-qualification-card">
 	<mat-card class="jobs-form">
 		<div class="tab-title">
-			<div class="jobs-title">Professional Experience</div>
+			<div class="jobs-title">{{title}}</div>
 		</div>
 		<hr>
 		<mat-card-content>
@@ -22,7 +22,7 @@
 						<mat-panel-description class="experience-card-content">
 							<div class="row-double">
 								<div class="double-item">
-									<mat-label>Job Title:</mat-label>
+									<mat-label>{{jobOrDegree}}:</mat-label>
 									<mat-form-field appearance="fill">
 										<input matInput formControlName="jobTitle" id="jobTitle" class="form-control">
 										<mat-error *ngIf="experienceFields.jobTitle.invalid">
@@ -40,7 +40,7 @@
 								</div>
 							</div>
 							<div class="row-single">
-								<mat-label>Company name:</mat-label>
+								<mat-label>{{companyOrSchool}}:</mat-label>
 								<mat-form-field appearance="fill">
 									<input matInput formControlName="company" id="company" class="form-control">
 									<mat-error *ngIf="experienceFields.company.invalid">{{getErrorMessage("company",
@@ -113,7 +113,7 @@
 							<span class="material-icons">
 								add_circle_outline
 							</span>
-							Add Experience
+							Add {{experienceOrQualification}}
 						</button>
 					</div>
 				</mat-accordion>
