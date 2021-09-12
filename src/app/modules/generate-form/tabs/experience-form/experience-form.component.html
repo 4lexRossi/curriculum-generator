@@ -1,35 +1,25 @@
 <mat-card class="experience-tab">
-  <mat-card class="about-me-form">
-    <div class="tab-title">
-      <div class="experience-title">Profile</div>
-    </div>
-    <hr>
-    <mat-card-content>
-      <form [formGroup]="aboutMeDataForm">
-        <div class="row">
-          <mat-label>About me:</mat-label>
-          <mat-form-field appearance="fill">
-            <textarea matInput formControlName="aboutMe" id="aboutMe" class="row-about-me"></textarea>
-            <mat-error *ngIf="aboutFields.aboutMe.invalid">{{getErrorMessage("aboutMe", aboutFields.aboutMe)}}
-            </mat-error>
-          </mat-form-field>
-          <div class="action-about-me">
-            <button mat-raised-button color="primary">Save</button>
-          </div>
-        </div>
-      </form>
-    </mat-card-content>
-  </mat-card>
+  <app-about-achievements-card
+    [profileAchievement]="'Profile'"
+    [aboutDescription]="'About me'">
+  </app-about-achievements-card>
+
   <app-experience-qualification-card
     [title]="'Professional Experience'"
     [jobOrDegree]="'Job Title'"
     [companyOrSchool]="'Company name'"
     [experienceOrQualification]="'Experience'">
   </app-experience-qualification-card>
+
   <app-experience-qualification-card
     [title]="'Graduation & Qualification'"
     [jobOrDegree]="'Degree & Qualification'"
     [companyOrSchool]="'College name'"
     [experienceOrQualification]="'Qualification'">
   </app-experience-qualification-card>
+
+  <app-about-achievements-card
+    [profileAchievement]="'Achievements'"
+    [aboutDescription]="'description'">
+  </app-about-achievements-card>
 </mat-card>
