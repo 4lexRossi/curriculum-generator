@@ -1,1 +1,123 @@
-<p>experience-qualification-card works!</p>
+<div class="experience-qualification-card">
+	<mat-card class="jobs-form">
+		<div class="tab-title">
+			<div class="jobs-title">Professional Experience</div>
+		</div>
+		<hr>
+		<mat-card-content>
+			<form [formGroup]="experienceDataForm">
+				<mat-accordion>
+					<mat-expansion-panel class="experience-card" (opened)="panelOpenState = true"
+						(closed)="panelOpenState = false">
+						<mat-expansion-panel-header>
+							<mat-panel-title class="experience-card-title">
+								<div *ngIf="!panelOpenState; else openCard">
+									Click to open experience panel
+								</div>
+								<ng-template #openCard>
+									Close experience panel
+								</ng-template>
+							</mat-panel-title>
+						</mat-expansion-panel-header>
+						<mat-panel-description class="experience-card-content">
+							<div class="row-double">
+								<div class="double-item">
+									<mat-label>Job Title:</mat-label>
+									<mat-form-field appearance="fill">
+										<input matInput formControlName="jobTitle" id="jobTitle" class="form-control">
+										<mat-error *ngIf="experienceFields.jobTitle.invalid">
+											{{getErrorMessage("jobTitle", experienceFields.jobTitle)}}</mat-error>
+									</mat-form-field>
+								</div>
+								<span class="separator"></span>
+								<div class="double-item">
+									<mat-label>City/Remote:</mat-label>
+									<mat-form-field appearance="fill">
+										<input matInput formControlName="city" id="city" class="form-control">
+										<mat-error *ngIf="experienceFields.city.invalid">{{getErrorMessage("city",
+											experienceFields.city)}}</mat-error>
+									</mat-form-field>
+								</div>
+							</div>
+							<div class="row-single">
+								<mat-label>Company name:</mat-label>
+								<mat-form-field appearance="fill">
+									<input matInput formControlName="company" id="company" class="form-control">
+									<mat-error *ngIf="experienceFields.company.invalid">{{getErrorMessage("company",
+										experienceFields.company)}}</mat-error>
+								</mat-form-field>
+							</div>
+							<div class="row-pick-double">
+								<div class="double-item">
+									<mat-label>Begin Date:</mat-label>
+									<div class="form-experience-pick" formControlName="beginData" id="beginData">
+										<mat-form-field class="form-month" appearance="fill">
+											<mat-label class="select-label">Month</mat-label>
+											<mat-select disableRipple>
+												<mat-option value="4">Option 1</mat-option>
+												<mat-option value="5">Option 2</mat-option>
+												<mat-option value="6">Option 3</mat-option>
+											</mat-select>
+										</mat-form-field>
+										<span class="date-separator"></span>
+										<mat-form-field class="form-year" appearance="fill">
+											<mat-label class="select-label">Year</mat-label>
+											<mat-select disableRipple>
+												<mat-option value="7">Option 1</mat-option>
+												<mat-option value="8">Option 2</mat-option>
+												<mat-option value="9">Option 3</mat-option>
+											</mat-select>
+										</mat-form-field>
+									</div>
+								</div>
+								<span class="separator"></span>
+								<div class="double-item">
+									<mat-label>End Date:</mat-label>
+									<div class="form-experience-pick" formControlName="endData" id="endData">
+										<mat-form-field class="form-month" appearance="fill">
+											<mat-label class="select-label">Month</mat-label>
+											<mat-select disableRipple>
+												<mat-option value="4">Option 1</mat-option>
+												<mat-option value="5">Option 2</mat-option>
+												<mat-option value="6">Option 3</mat-option>
+											</mat-select>
+										</mat-form-field>
+										<span class="date-separator"></span>
+										<mat-form-field class="form-year" appearance="fill">
+											<mat-label class="select-label">Year</mat-label>
+											<mat-select disableRipple>
+												<mat-option value="7">Option 1</mat-option>
+												<mat-option value="8">Option 2</mat-option>
+												<mat-option value="9">Option 3</mat-option>
+											</mat-select>
+										</mat-form-field>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<mat-label>Description:</mat-label>
+								<mat-form-field appearance="fill">
+									<textarea matInput formControlName="description" id="description"
+										class="row-job-description"></textarea>
+									<mat-error *ngIf="experienceFields.description.invalid">
+										{{getErrorMessage("description", experienceFields.description)}}</mat-error>
+								</mat-form-field>
+								<div class="action-about-me">
+									<button mat-raised-button color="primary">Save</button>
+								</div>
+							</div>
+						</mat-panel-description>
+					</mat-expansion-panel>
+					<div class="action-experience">
+						<button mat-raised-button color="primary">
+							<span class="material-icons">
+								add_circle_outline
+							</span>
+							Add Experience
+						</button>
+					</div>
+				</mat-accordion>
+			</form>
+		</mat-card-content>
+	</mat-card>
+</div>
