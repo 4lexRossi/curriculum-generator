@@ -11,7 +11,7 @@ import { ExperienceData } from 'src/app/models/experienceData';
 export class ExperienceFormComponent implements OnInit {
 
   descriptionPattern = '^[A-Za-z0-9-_ ]+$';
-  panelOpenState = false;
+  // panelOpenState = false;
 
   constructor(private readonly formBuilder: FormBuilder) { }
 
@@ -19,14 +19,14 @@ export class ExperienceFormComponent implements OnInit {
     aboutMe: ''
   }
 
-  experienceData: ExperienceData = {
-    jobTitle: '',
-    city: '',
-    company: '',
-    beginData: '',
-    endData: '',
-    description: ''
-  }
+  // experienceData: ExperienceData = {
+  //   jobTitle: '',
+  //   city: '',
+  //   company: '',
+  //   beginData: '',
+  //   endData: '',
+  //   description: ''
+  // }
 
   ngOnInit(): void {
   }
@@ -35,27 +35,27 @@ export class ExperienceFormComponent implements OnInit {
     aboutMe : new FormControl(this.aboutMeData.aboutMe, Validators.pattern(this.descriptionPattern)),
   }
 
-  experienceFields = {
-    jobTitle : new FormControl(this.experienceData.jobTitle, Validators.pattern(this.descriptionPattern)),
-    city : new FormControl(this.experienceData.city, Validators.maxLength(30,)),
-    company : new FormControl(this.experienceData.company, Validators.maxLength(30,)),
-    beginData : new FormControl(this.experienceData.beginData, Validators.maxLength(30,)),
-    endData : new FormControl(this.experienceData.endData, Validators.maxLength(30,)),
-    description : new FormControl(this.experienceData.description, Validators.pattern(this.descriptionPattern)),
-  }
+  // experienceFields = {
+  //   jobTitle : new FormControl(this.experienceData.jobTitle, Validators.pattern(this.descriptionPattern)),
+  //   city : new FormControl(this.experienceData.city, Validators.maxLength(30,)),
+  //   company : new FormControl(this.experienceData.company, Validators.maxLength(30,)),
+  //   beginData : new FormControl(this.experienceData.beginData, Validators.maxLength(30,)),
+  //   endData : new FormControl(this.experienceData.endData, Validators.maxLength(30,)),
+  //   description : new FormControl(this.experienceData.description, Validators.pattern(this.descriptionPattern)),
+  // }
 
   aboutMeDataForm = this.formBuilder.group({
     aboutMe: this.aboutFields.aboutMe,
   });
 
-  experienceDataForm = this.formBuilder.group({
-    jobTitle: this.experienceFields.jobTitle,
-    city: this.experienceFields.city,
-    company: this.experienceFields.company,
-    beginData: this.experienceFields.beginData,
-    endData: this.experienceFields.endData,
-    description: this.experienceFields.description,
-  });
+  // experienceDataForm = this.formBuilder.group({
+  //   jobTitle: this.experienceFields.jobTitle,
+  //   city: this.experienceFields.city,
+  //   company: this.experienceFields.company,
+  //   beginData: this.experienceFields.beginData,
+  //   endData: this.experienceFields.endData,
+  //   description: this.experienceFields.description,
+  // });
 
   onSubmit = () => {
     if (this.aboutMeDataForm.valid) {
@@ -66,9 +66,9 @@ export class ExperienceFormComponent implements OnInit {
     //   this.validateAllFormFields(this.formGroupReference);
     //   this.toastComponent.error(this.translate.instant('ERROR'), this.translate.instant('VALIDATION_ERRORS'));
     }
-    if (this.experienceDataForm.valid) {
-      this.experienceDataForm;
-    }
+    // if (this.experienceDataForm.valid) {
+    //   this.experienceDataForm;
+    // }
   }
 
   errorMessages = {

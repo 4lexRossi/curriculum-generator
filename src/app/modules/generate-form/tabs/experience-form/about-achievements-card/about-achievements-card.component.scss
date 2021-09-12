@@ -1,0 +1,38 @@
+.about-me-form {
+    background-color: var(--card-background-color);
+    box-shadow: 0px 9px 11px rgba(33, 37, 41, 0.2);
+    color: var(--card-text-color);
+    margin: 20px 0;
+    .tab-title {
+      display: flex;
+      justify-content: space-between;
+      .experience-title {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      .row:not(:first-child) {
+        display: flex;
+        justify-content: center;
+      }
+      .row-about-me {
+        min-height: 200px;
+      }
+      .action-about-me {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    ::ng-deep .mat-form-field {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
