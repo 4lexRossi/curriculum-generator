@@ -1,0 +1,49 @@
+.skills-idiom-form {
+    background-color: var(--card-background-color);
+    box-shadow: 0px 9px 11px rgba(33, 37, 41, 0.2);
+    color: var(--card-text-color);
+    margin: 20px 0;
+    .tab-title {
+      display: flex;
+      justify-content: space-between;
+      .experience-title {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .row-double {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+        .separator {
+            margin: 0 10px;
+        }
+        .double-item {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            .select-label {
+                color: var(--card-text-color);
+            }
+            .form-level {
+                width: 334px;
+            }
+        }
+    }
+    .record-skills-idioms {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .action-skills-idioms {
+        display: flex;
+        justify-content: center;
+        button {
+            background-color: var(--card-background-color);
+            width: 100%;
+            border: 1px solid black;
+            color: black
+        }
+    }
+}

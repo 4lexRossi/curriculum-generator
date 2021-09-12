@@ -9,6 +9,7 @@ import { ExperienceFormComponent } from './generate-form/tabs/experience-form/ex
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ExperienceQualificationCardComponent } from './generate-form/tabs/experience-form/experience-qualification-card/experience-qualification-card.component';
 import { AboutAchievementsCardComponent } from './generate-form/tabs/experience-form/about-achievements-card/about-achievements-card.component';
+import { SkillsIdiomCardComponent } from './generate-form/tabs/experience-form/skills-idiom-card/skills-idiom-card.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { AboutAchievementsCardComponent } from './generate-form/tabs/experience-
     PersonalFormComponent,
     ExperienceFormComponent,
     ExperienceQualificationCardComponent,
-    AboutAchievementsCardComponent
+    AboutAchievementsCardComponent,
+    SkillsIdiomCardComponent
   ],
   exports: [
     GenerateFormComponent,
