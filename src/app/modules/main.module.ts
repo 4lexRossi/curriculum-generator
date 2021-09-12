@@ -7,6 +7,7 @@ import { GenerateFormComponent } from './generate-form/generate-form.component';
 import { PersonalFormComponent } from './generate-form/tabs/personal-form/personal-form.component';
 import { ExperienceFormComponent } from './generate-form/tabs/experience-form/experience-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ExperienceQualificationCardComponent } from './generate-form/tabs/experience-form/experience-qualification-card/experience-qualification-card.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     GenerateFormComponent,
     PersonalFormComponent,
-    ExperienceFormComponent
+    ExperienceFormComponent,
+    ExperienceQualificationCardComponent
   ],
   exports: [
     GenerateFormComponent,

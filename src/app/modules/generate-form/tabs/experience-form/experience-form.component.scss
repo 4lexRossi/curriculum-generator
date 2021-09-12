@@ -29,7 +29,7 @@
         justify-content: center;
       }
       .row-about-me {
-        height: 200px;
+        min-height: 200px;
       }
       .action-about-me {
         width: 100%;
@@ -51,23 +51,33 @@
     box-shadow: 0px 9px 11px rgba(33, 37, 41, 0.2);
     .experience-card,
     .experience-card-title,
-    .experience-card-content {
+    .experience-card-content,
+    mat-panel-description {
       background-color: var(--card-background-color);
       color: var(--card-text-color);
     }
-
+    ::ng-deep .mat-expansion-indicator::after{
+      color: var(--card-text-color) !important;
+    }
     .experience-card {
       margin-bottom: 20px;
+      .experience-card-title div {
+        display: flex;
+      }
+      .experience-card-title span {
+        color: #000;
+      }
     }
 
     .experience-card-title .material-icons {
       vertical-align: middle;
       margin: 0 10px;
     }
+    // .mat-expansion-panel-header-title, .mat-expansion-panel-header-description
     ::ng-deep .mat-expansion-panel-body {
       padding: 0 16px 16px;
     }
-    ::ng-deep .mat-expansion-panel-header-description {
+    ::ng-deep .mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
       margin: 0;
     }
     .experience-card-content {
@@ -75,8 +85,8 @@
       flex-direction: column;
       .row-double {
         display: flex;
-        width: 100%;
         justify-content: space-between;
+        width: 100%;
         margin-bottom: 10px;
         .separator {
           margin: 0 10px;
@@ -87,11 +97,49 @@
           width: 50%;
         }
       }
+      .row-pick-double {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        .separator {
+          margin: 0 10px;
+        }
+        .double-item {
+          display: flex;
+          flex-direction: column;
+          width: 48%;
+        }
+        .form-experience-pick {
+          color: black;
+          display: flex;
+          justify-content: space-between;
+          .select-label {
+            color: #000;
+          }
+          .form-month {
+            width: 50%;
+          }
+          .form-year {
+            width: 43%;
+          }
+          .date-separator {
+            margin: 0 12px;
+          }
+        }
+      }
       .row-single {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-bottom: 10px;
+      }
+      .row-job-description {
+        min-height: 100px;
+      }
+      .action-about-me {
+        width: 100%;
+        display: flex;
+        justify-content: center;
       }
       ::ng-deep .mat-form-field {
         width: 100%;
