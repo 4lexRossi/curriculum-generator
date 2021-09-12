@@ -14,7 +14,12 @@ export class ExperienceQualificationCardComponent implements OnInit {
 
   constructor(private readonly formBuilder: FormBuilder) { }
 
-  @Input() experienceData: ExperienceData = {
+  @Input() title = '';
+  @Input() jobOrDegree = '';
+  @Input() companyOrSchool = '';
+  @Input() experienceOrQualification = '';
+
+  experienceData: ExperienceData = {
     jobTitle: '',
     city: '',
     company: '',
