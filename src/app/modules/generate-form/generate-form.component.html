@@ -1,44 +1,43 @@
 <div class="generate-form">
-    <mat-stepper labelPosition="bottom" #stepper>
-        <mat-step class="personal-form" [stepControl]="firstFormGroup">
-            <ng-template matStepLabel>Personal</ng-template>
-            <div class="separator"></div>
-            <app-personal-form></app-personal-form>
-            <div class="form-action">
-                <button mat-button (click)="stepper.reset()">Reset <span class="material-icons">
-                    restart_alt
-                    </span>
-                    </button>
-                <button mat-raised-button color="primary" matStepperNext>Next <span class="material-icons">
-                    chevron_right
-                    </span></button>
-            </div>
-        </mat-step>
-        <mat-step [stepControl]="secondFormGroup">
-            <ng-template matStepLabel>Experiences</ng-template>
-            <div class="separator"></div>
-            <app-experience-form></app-experience-form>
-            <div class="form-action">
-                <button mat-button matStepperPrevious><span class="material-icons">
-                    chevron_left
-                    </span> Back</button>
-                <button mat-raised-button color="primary" matStepperNext>Next <span class="material-icons">
-                    chevron_right
-                    </span></button>
-            </div>
-        </mat-step>
-        <mat-step [stepControl]="reviewFormGroup">
-            <ng-template matStepLabel>Review</ng-template>
-            <!-- <p>You are now done.</p> -->
-            <div class="form-action">
-                <button mat-button matStepperPrevious><span class="material-icons">
-                    chevron_left
-                    </span> Back</button>
-                <button mat-raised-button color="primary" (click)="stepper.reset()">Reset <span class="material-icons">
-                    restart_alt
-                    </span>
-                    </button>
-            </div>
-        </mat-step>
-    </mat-stepper>
+	<mat-stepper labelPosition="bottom" #stepper>
+		<mat-step class="personal-form" [stepControl]="firstFormGroup">
+			<ng-template matStepLabel>Personal</ng-template>
+			<div class="separator"></div>
+			<app-personal-form></app-personal-form>
+			<div class="form-action">
+				<button mat-button (click)="stepper.reset()">Reset <span class="material-icons">
+						restart_alt
+					</span>
+				</button>
+				<button mat-raised-button color="primary" matStepperNext>Next <span class="material-icons">
+						chevron_right
+					</span></button>
+			</div>
+		</mat-step>
+		<mat-step [stepControl]="secondFormGroup">
+			<ng-template matStepLabel>Experiences</ng-template>
+			<div class="separator"></div>
+			<app-experience-form></app-experience-form>
+			<div class="form-action">
+				<button mat-button matStepperPrevious><span class="material-icons">
+						chevron_left
+					</span> Back</button>
+				<button mat-raised-button color="primary" matStepperNext>Next <span class="material-icons">
+						chevron_right
+					</span></button>
+			</div>
+		</mat-step>
+		<mat-step [stepControl]="reviewFormGroup">
+			<ng-template matStepLabel>Review</ng-template>
+			<div class="form-action">
+				<button mat-button matStepperPrevious><span class="material-icons">
+						chevron_left
+					</span> Back</button>
+				<button mat-raised-button color="primary" (click)="stepper.reset()">Reset <span class="material-icons">
+						restart_alt
+					</span>
+				</button>
+			</div>
+		</mat-step>
+	</mat-stepper>
 </div>
