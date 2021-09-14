@@ -29,6 +29,8 @@
 		</mat-step>
 		<mat-step [stepControl]="reviewFormGroup">
 			<ng-template matStepLabel>Review</ng-template>
+			<div class="separator"></div>
+			<app-generate-cv></app-generate-cv>
 			<div class="form-action">
 				<button mat-button matStepperPrevious><span class="material-icons">
 						chevron_left

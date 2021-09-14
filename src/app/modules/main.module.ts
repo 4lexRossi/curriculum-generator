@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ExperienceQualificationCardComponent } from './generate-form/tabs/experience-form/experience-qualification-card/experience-qualification-card.component';
 import { AboutAchievementsCardComponent } from './generate-form/tabs/experience-form/about-achievements-card/about-achievements-card.component';
 import { SkillsIdiomCardComponent } from './generate-form/tabs/experience-form/skills-idiom-card/skills-idiom-card.component';
+import { GenerateCVComponent } from './generate-form/tabs/generate-cv/generate-cv.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { SkillsIdiomCardComponent } from './generate-form/tabs/experience-form/s
     ExperienceFormComponent,
     ExperienceQualificationCardComponent,
     AboutAchievementsCardComponent,
-    SkillsIdiomCardComponent
+    SkillsIdiomCardComponent,
+    GenerateCVComponent
   ],
   exports: [
     GenerateFormComponent,
