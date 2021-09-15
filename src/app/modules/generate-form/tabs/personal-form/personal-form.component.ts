@@ -51,8 +51,8 @@ export class PersonalFormComponent {
 		citizenship: new FormControl(this.personalData.city, [Validators.maxLength(30)]),
 		civilState: new FormControl(this.personalData.civilState, [Validators.maxLength(30)]),
 		gender: new FormControl(this.personalData.gender),
-		linkedIn: new FormControl(this.personalData.linkedIn, [Validators.maxLength(30)]),
-		website: new FormControl(this.personalData.website, [Validators.maxLength(30)]),
+		linkedIn: new FormControl(this.personalData.linkedIn, [Validators.maxLength(60)]),
+		website: new FormControl(this.personalData.website, [Validators.maxLength(60)]),
 	}
 
 	personalDataForm = this.formBuilder.group({
