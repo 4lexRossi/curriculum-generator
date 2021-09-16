@@ -13,12 +13,15 @@
 				display: flex;
 				justify-content: center;
 				margin-bottom: 10px;
+				img {
+					box-shadow: -7px 7px 11px rgba(33, 37, 41, 0.2);
+				}
 			}
 			.action-generate-cv {
 				display: flex;
 				justify-content: center;
 			}
-    }
+    	}
 	}
 
 }
