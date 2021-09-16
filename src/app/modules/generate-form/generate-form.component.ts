@@ -20,6 +20,10 @@ export class GenerateFormComponent implements OnInit {
 		this.secondFormGroup = this._formBuilder.group({
 			secondCtrl: ['', Validators.required]
 		});
+		this.reviewFormGroup = this._formBuilder.group({
+			reviewFormGroup: ['', Validators.required]
+		});
 	}
+
 
 }
