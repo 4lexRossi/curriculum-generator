@@ -4,12 +4,12 @@
 			<div class="personal-title">Personal Detail</div>
 			<div class="language-component">
 				<mat-label class="language">Language:</mat-label>
-				<mat-form-field appearance="fill" class="select-language">
-					<mat-select>
+				<div class="select-language">
+					<mat-select (ngModelChange)="changeLanguage($event)" (ngModel)="languagesAvailable" ngModel="english">
 						<mat-option value="english">English</mat-option>
 						<mat-option value="portuguese">Português</mat-option>
 					</mat-select>
-				</mat-form-field>
+				</div>
 			</div>
 		</mat-card-title>
 		<hr>
@@ -76,7 +76,7 @@
 						<div class="form-date-pick">
 							<mat-form-field class="form-day" appearance="fill">
 								<mat-label class="select-label">Day</mat-label>
-								<mat-select disableRipple>
+								<mat-select (ngModelChange)="changeDay($event)" (ngModel)="days" ngModel="1">
 									<mat-option value="1">Option 1</mat-option>
 									<mat-option value="2">Option 2</mat-option>
 									<mat-option value="3">Option 3</mat-option>
