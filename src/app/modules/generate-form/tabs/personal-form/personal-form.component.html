@@ -2,18 +2,14 @@
 	<mat-card class="personal-form">
 		<mat-card-title class="tab-title">
 			<div class="personal-title">Personal Detail</div>
-			<div class="select-language">
-				<mat-label class="language-label">Language: </mat-label>
-				<div class="language-menu" [matMenuTriggerFor]="menu">
-					<span class="option-language">English</span>
-					<mat-icon>expand_more</mat-icon>
-					<mat-menu appendTo="body" class="language-menu-content" #menu="matMenu">
-						<a mat-list-item *ngFor="let option of languages">
-							<button class="language-menu-item" mat-menu-item>
-								<span>{{option.viewValue}}</span>
-							</button></a>
-					</mat-menu>
-				</div>
+			<div class="language-component">
+				<mat-label class="language">Language:</mat-label>
+				<mat-form-field appearance="fill" class="select-language">
+					<mat-select>
+						<mat-option value="english">English</mat-option>
+						<mat-option value="portuguese">Português</mat-option>
+					</mat-select>
+				</mat-form-field>
 			</div>
 		</mat-card-title>
 		<hr>
