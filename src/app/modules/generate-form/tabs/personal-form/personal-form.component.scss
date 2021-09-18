@@ -18,6 +18,7 @@
           margin: 0 10px;
         }
         .select-language {
+          width: 120px;
           margin: 0;
         }
       }
@@ -34,7 +35,6 @@
     }
     ::ng-deep .mat-form-field {
       width: 100%;
-      margin-bottom: 10px;
     }
     .mat-menu-content {
       color: black;
@@ -58,6 +58,7 @@
           }
           .form-day {
             width: 23%;
+            height: 30px;
           }
           .form-month {
             width: 43%;

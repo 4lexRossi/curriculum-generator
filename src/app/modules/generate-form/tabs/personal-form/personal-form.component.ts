@@ -11,18 +11,52 @@ import { PersonalData } from 'src/app/models/personalData';
 })
 export class PersonalFormComponent {
 
-	disableSelect = new FormControl(false);
-	languages: Languages[] = [
-		{ value: 'english-0', viewValue: 'English' },
-		{ value: 'portuguese-1', viewValue: 'Portuguese' }
+	languagesAvailable = ['English', 'Portuguese']
+	days = [
+		{'day': 1},
+		{'day': 2},
+		{'day': 3},
+		{'day': 4},
+		{'day': 5},
+		{'day': 6},
+		{'day': 7},
+		{'day': 8},
+		{'day': 9},
+		{'day': 10},
+		{'day': 11},
+		{'day': 12},
+		{'day': 13},
+		{'day': 14},
+		{'day': 15},
+		{'day': 16},
+		{'day': 17},
+		{'day': 18},
+		{'day': 19},
+		{'day': 20},
+		{'day': 21},
+		{'day': 22},
+		{'day': 23},
+		{'day': 24},
+		{'day': 25},
+		{'day': 26},
+		{'day': 27},
+		{'day': 28},
+		{'day': 29},
+		{'day': 30},
+		{'day': 31}
 	];
 
-	languagesAvailable = ['English', 'Portuguese']
-	days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-	selectedLanguage = this.languages[1].value;
 	constructor(private readonly formBuilder: FormBuilder) { }
 
+	changeLanguage(event: string) {
+		console.log(event);
+		return null;
+	}
+
+	changeDay(event: number) {
+		console.log(event);
+		return null;
+	}
 	personalData: PersonalData = {
 		firstName: '',
 		lastName: '',
