@@ -11,20 +11,21 @@
         display: flex;
         align-items: center;
       }
-      .select-language {
-        color: var(--card-text-color);
+      .language-component{
         display: flex;
         align-items: center;
-        .language-label {
-          margin: 0 15px;
+        .language {
+          margin: 0 10px;
         }
-        .language-menu {
-          display: flex;
-          align-items: center;
+        .select-language {
+          margin: 0;
         }
       }
     }
 
+    ::ng-deep .mat-select-value {
+      color: var(--card-text-color) !important;
+    }
     .row {
       display: flex;
       flex-direction: row;

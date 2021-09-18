@@ -11,11 +11,13 @@ import { PersonalData } from 'src/app/models/personalData';
 })
 export class PersonalFormComponent {
 
+	disableSelect = new FormControl(false);
 	languages: Languages[] = [
 		{ value: 'english-0', viewValue: 'English' },
 		{ value: 'portuguese-1', viewValue: 'Portuguese' }
 	];
 
+	languagesAvailable = ['English', 'Portuguese']
 	days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 	selectedLanguage = this.languages[1].value;
