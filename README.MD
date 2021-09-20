@@ -1,4 +1,5 @@
 # CurriculumGenerator
+web site for generate free CVs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
 
