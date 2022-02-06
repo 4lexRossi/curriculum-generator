@@ -1,2 +1,2 @@
 # Alos Curriculum Generator
-web site for generate free CVs
+web site to generate free CVs
